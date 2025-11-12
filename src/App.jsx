@@ -31,7 +31,7 @@ function App() {
               {actors.map((actor) => (
                 <div
                   key={actor.id}
-                  class="card col-12 col-md-3 col-lg-2 mx-1 align-items-center"
+                  class="card col-12 col-md-3 col-lg-2 mx-1 py-1  align-items-center"
                 >
                   <img
                     src={actor.image}
@@ -49,9 +49,16 @@ function App() {
                       <p>{actor.biography}</p>
                     </div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item">{actor.birth_year}</li>
-                      <li class="list-group-item">{actor.nationality}</li>
-                      <li class="list-group-item">{actor.awards}</li>
+                      <li class="list-group-item">
+                        <strong>Year of Birth:</strong> {actor.birth_year}
+                      </li>
+                      <li class="list-group-item">
+                        <strong>Nationality: </strong> {actor.nationality}
+                      </li>
+                      <li class="list-group-item">
+                        {" "}
+                        <strong>Awards:</strong> {actor.awards}
+                      </li>
                     </ul>
                   </div>
                 </div>
