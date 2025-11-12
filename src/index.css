@@ -4,4 +4,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: aqua;
+
+  h1 {
+    background-color: aqua;
+  }
+
+  .card-text {
+    height: 150px;
+  }
 }

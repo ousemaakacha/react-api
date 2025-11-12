@@ -23,9 +23,9 @@ function App() {
   return (
     <>
       <div>
-        <h1 className="text-center my-5">ATTORI E ATTRICI</h1>
+        <h1 className="text-center my-3 ">ATTORI E ATTRICI</h1>
         <div>
-          <div className="content">
+          <div className="content py-1">
             <div className="row g-2 justify-content-center">
               {actors.map((actor) => (
                 <div
@@ -45,7 +45,7 @@ function App() {
                   <div className="col">
                     <div class="card-body">
                       <h5 class="card-title">{actor.name}</h5>
-                      <p>{actor.biography}</p>
+                      <p className="card-text">{actor.biography}</p>
                     </div>
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item">
