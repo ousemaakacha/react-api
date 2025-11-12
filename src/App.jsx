@@ -5,7 +5,7 @@ function App() {
   const [actors, setActors] = useState([]);
   const male_actend = "https://lanciweb.github.io/demo/api/actors/";
 
-  function handleClick() {
+  function fetchActors() {
     axios
       .get(male_actend)
       .then((res) => {
@@ -18,14 +18,13 @@ function App() {
         console.error(err.message);
       });
   }
-  useEffect(handleClick, []);
+  useEffect(fetchActors, []);
 
   return (
     <>
       <div>
-        <h1 className="text-center my-3">ATTORI E ATTRICI</h1>
+        <h1 className="text-center my-5">ATTORI E ATTRICI</h1>
         <div>
-          {/* <button onClick={handleClick}> Carica Attori </button> */}
           <div className="content">
             <div className="row g-2 justify-content-center">
               {actors.map((actor) => (
